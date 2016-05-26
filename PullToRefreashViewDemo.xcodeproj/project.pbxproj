@@ -14,6 +14,7 @@
 		D77DCA201CF68D0D002249CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77DCA1F1CF68D0D002249CC /* Assets.xcassets */; };
 		D77DCA231CF68D0D002249CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77DCA211CF68D0D002249CC /* LaunchScreen.storyboard */; };
 		D77DCA2E1CF68D0D002249CC /* PullToRefreashViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D77DCA2D1CF68D0D002249CC /* PullToRefreashViewDemoUITests.m */; };
+		D77DCA3A1CF68FB4002249CC /* HLLPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77DCA391CF68FB4002249CC /* HLLPullToRefreshView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D77DCA291CF68D0D002249CC /* PullToRefreashViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullToRefreashViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77DCA2D1CF68D0D002249CC /* PullToRefreashViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PullToRefreashViewDemoUITests.m; sourceTree = "<group>"; };
 		D77DCA2F1CF68D0D002249CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D77DCA381CF68FB4002249CC /* HLLPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLPullToRefreshView.h; sourceTree = "<group>"; };
+		D77DCA391CF68FB4002249CC /* HLLPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLPullToRefreshView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				D77DCA171CF68D0D002249CC /* AppDelegate.m */,
 				D77DCA191CF68D0D002249CC /* ViewController.h */,
 				D77DCA1A1CF68D0D002249CC /* ViewController.m */,
+				D77DCA381CF68FB4002249CC /* HLLPullToRefreshView.h */,
+				D77DCA391CF68FB4002249CC /* HLLPullToRefreshView.m */,
 				D77DCA1C1CF68D0D002249CC /* Main.storyboard */,
 				D77DCA1F1CF68D0D002249CC /* Assets.xcassets */,
 				D77DCA211CF68D0D002249CC /* LaunchScreen.storyboard */,
@@ -214,6 +219,7 @@
 				D77DCA1B1CF68D0D002249CC /* ViewController.m in Sources */,
 				D77DCA181CF68D0D002249CC /* AppDelegate.m in Sources */,
 				D77DCA151CF68D0D002249CC /* main.m in Sources */,
+				D77DCA3A1CF68FB4002249CC /* HLLPullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
