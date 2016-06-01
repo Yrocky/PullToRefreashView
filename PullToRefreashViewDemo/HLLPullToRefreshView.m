@@ -12,8 +12,8 @@ NSString * const PullToRefreshNormalInfo    = @"下拉进行选择操作";
 NSString * const PullToRefreshReleaseInfo   = @"松手进行切换";
 
 CGFloat const OffsetThreshold               = 60.0f;
-
-static CGFloat refreshProportion            = 0.4;
+static CGFloat ScrollViewTopMargin          = -64.0f;
+static CGFloat RefreshProportion            = 0.4;
 
 @interface HLLPullToRefreshView ()<UIScrollViewDelegate>
 
@@ -50,7 +50,7 @@ static CGFloat refreshProportion            = 0.4;
     
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
-    CGFloat margin = width * refreshProportion;
+    CGFloat margin = width * RefreshProportion;
     
     _refreshLayer.frame = CGRectMake(0, 0, margin, height);
     _contentLabel.frame = CGRectMake(margin, 0, width - margin, height);
@@ -66,7 +66,7 @@ static CGFloat refreshProportion            = 0.4;
     
     CGFloat radius = 5.0f;
     CGFloat margin = 10.0f;
-    CGPoint center = CGPointMake(refreshProportion * CGRectGetWidth(self.bounds) - 2 * radius - margin,
+    CGPoint center = CGPointMake(RefreshProportion * CGRectGetWidth(self.bounds) - 2 * radius - margin,
                                  0.5 * CGRectGetHeight(self.bounds));
     
     // ShaperLayer
@@ -153,9 +153,9 @@ static CGFloat refreshProportion            = 0.4;
     
     CGFloat contentOffsetY = scrollView.contentOffset.y;
     
-    if (contentOffsetY < -64.0f) {
+    if (contentOffsetY < ScrollViewTopMargin) {
         
-        [self refreshInfoWithOffset:-64.0 - contentOffsetY];
+        [self refreshInfoWithOffset:ScrollViewTopMargin - contentOffsetY];
     }
 }
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
@@ -167,7 +167,7 @@ static CGFloat refreshProportion            = 0.4;
     
     CGFloat contentOffsetY = scrollView.contentOffset.y;
     
-    CGFloat margin = -64.0 - contentOffsetY;
+    CGFloat margin = ScrollViewTopMargin - contentOffsetY;
 
     if (velocity.y <= 0 && margin > OffsetThreshold) {
         NSLog(@"可以圆满");
